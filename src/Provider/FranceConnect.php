@@ -65,7 +65,7 @@ class FranceConnect extends AbstractProvider
    * @param array       $response
    * @param AccessToken $token
    *
-   * @return SlackResourceOwner
+   * @return FranceConnectResourceOwner
    */
   protected function createResourceOwner(array $response, AccessToken $token)
   {
@@ -84,7 +84,7 @@ class FranceConnect extends AbstractProvider
   {
       if ($response->getStatusCode() >= 400) {
           throw new IdentityProviderException(
-              $data['error'] ?: $response->getReasonPhrase(),
+              $data['message'] ?: $response->getReasonPhrase(),
               $response->getStatusCode(),
               $response
           );

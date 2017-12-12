@@ -22,14 +22,4 @@ class FranceConnectResourceOwner implements ResourceOwnerInterface
     {
         $this->response = $response;
     }
-
-    /**
-     * Get resource owner id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->response['data']['id'] ?: null;
-    }
 }

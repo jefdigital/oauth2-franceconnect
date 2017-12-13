@@ -6,6 +6,8 @@ use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 
+use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
+
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -17,6 +19,8 @@ use Psr\Http\Message\ResponseInterface;
  */
 class FranceConnect extends AbstractProvider
 {
+  use BearerAuthorizationTrait;
+
   /**
    * Returns the base URL for authorizing a client.
    *
@@ -56,7 +60,7 @@ class FranceConnect extends AbstractProvider
    */
   protected function getDefaultScopes()
   {
-      return ['openid'];
+      return ['profile email address phone openid birth'];
   }
 
   /**

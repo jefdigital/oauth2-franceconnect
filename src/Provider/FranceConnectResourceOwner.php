@@ -22,4 +22,36 @@ class FranceConnectResourceOwner implements ResourceOwnerInterface
     {
         $this->response = $response;
     }
+
+    /**
+     * Get resource owner id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->response['sub'] ?: null;
+    }
+
+    /**
+     * Return all of the owner details available as an array.
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->response;
+    }
+
+    /**
+     * Get resource owner id
+     *
+     * @return string|null
+     */
+    public function getEmail()
+    {
+        return $this->response['email'] ?: null;
+    }
+
+
 }

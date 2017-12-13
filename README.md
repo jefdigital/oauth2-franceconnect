@@ -7,21 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-
-Franceconnect OAuth 2.0 Client Provider for The PHP League OAuth2-Client.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
+This package provides France Connect OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Install
 
@@ -33,14 +19,7 @@ $ composer require jefdigital/oauth2-franceconnect
 
 ## Usage
 
-``` php
-$skeleton = new JefDigital\OAuth2\Client();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+Usage is the same as The League's OAuth client, using `\JefDigital\OAuth2\Client\Provider\FranceConnect` as the provider.
 
 ## Testing
 
@@ -50,11 +29,7 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email hello@jefdigital.fr instead of using the issue tracker.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 

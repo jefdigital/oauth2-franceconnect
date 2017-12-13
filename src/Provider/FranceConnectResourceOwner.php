@@ -44,7 +44,7 @@ class FranceConnectResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner id
+     * Get resource owner email
      *
      * @return string|null
      */
@@ -53,5 +53,54 @@ class FranceConnectResourceOwner implements ResourceOwnerInterface
         return $this->response['email'] ?: null;
     }
 
+    /**
+     * Get resource owner gender
+     *
+     * @return string|null
+     */
+    public function getGender()
+    {
+        return $this->response['gender'] ?: null;
+    }
+
+    /**
+     * Get resource owner given name
+     *
+     * @return string|null
+     */
+    public function getGivenName()
+    {
+        return $this->response['given_name'] ?: null;
+    }
+
+    /**
+     * Get resource owner first name
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->response['first_name'] ?: null;
+    }
+
+    /**
+     * Get resource owner birth date
+     *
+     * @return string|null
+     */
+    public function getBirthDate()
+    {
+        return $this->response['birthdate'] ?: null;
+    }
+
+    /**
+     * Get resource owner birth place
+     *
+     * @return string|null
+     */
+    public function getBirthPlace()
+    {
+        return $this->response['birthplace'] ?: null;
+    }
 
 }

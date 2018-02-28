@@ -29,9 +29,12 @@ Usage is the same as The League's OAuth client, using `\JefDigital\OAuth2\Client
 session_start();
 
 $provider = new \JefDigital\OAuth2\Client\Provider\FranceConnect([
-    'clientId'          => '{fc-client-id}',
-    'clientSecret'      => '{fc-client-secret}',
-    'redirectUri'       => 'https://example.com/callback-url',
+    'clientId'                => '{fc-client-id}',
+    'clientSecret'            => '{fc-client-secret}',
+    'redirectUri'             => 'https://example.com/callback-url',
+    'baseAuthorizationUrl'    => 'https://example.com/base-auth-url',
+    'baseAccessTokenUrl'      => 'https://example.com/base-access-url',
+    'resourceOwnerDetailsUrl' => 'https://example.com/resource-owner-url',
 ]);
 
 if (!isset($_GET['code'])) {

@@ -22,13 +22,29 @@ class FranceConnect extends AbstractProvider
   use BearerAuthorizationTrait;
 
   /**
+   * @var string
+   */
+  protected $baseAuthorizationUrl;
+
+  /**
+   * @var string
+   */
+  protected $baseAccessTokenUrl;
+
+  /**
+   * @var string
+   */
+   protected $resourceOwnerDetailsUrl;
+
+  /**
    * Returns the base URL for authorizing a client.
    *
    * @return string
    */
   public function getBaseAuthorizationUrl()
   {
-      return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize';
+      return $this->baseAuthorizationUrl;
+      //return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize';
   }
 
   /**
@@ -40,7 +56,8 @@ class FranceConnect extends AbstractProvider
    */
   public function getBaseAccessTokenUrl(array $params)
   {
-      return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/token';
+      return $this->baseAccessTokenUrl;
+      //return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/token';
   }
 
   /**
@@ -52,7 +69,8 @@ class FranceConnect extends AbstractProvider
    */
   public function getResourceOwnerDetailsUrl(AccessToken $token)
   {
-      return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo';
+      return $this->resourceOwnerDetailsUrl;
+      // return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo';
   }
 
   /**

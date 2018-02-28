@@ -44,7 +44,6 @@ class FranceConnect extends AbstractProvider
   public function getBaseAuthorizationUrl()
   {
       return $this->baseAuthorizationUrl;
-      //return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/authorize';
   }
 
   /**
@@ -57,7 +56,6 @@ class FranceConnect extends AbstractProvider
   public function getBaseAccessTokenUrl(array $params)
   {
       return $this->baseAccessTokenUrl;
-      //return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/token';
   }
 
   /**
@@ -70,7 +68,6 @@ class FranceConnect extends AbstractProvider
   public function getResourceOwnerDetailsUrl(AccessToken $token)
   {
       return $this->resourceOwnerDetailsUrl;
-      // return 'https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo';
   }
 
   /**
